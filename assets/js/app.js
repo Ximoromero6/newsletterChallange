@@ -1,10 +1,11 @@
 (function () {
   const formEmail = document.getElementById("sendForm");
   const emailText = formEmail.querySelector("input");
-  const containerError = document.querySelector(".containerError");
 
   let dinamycImage = document.querySelector(".rightContainer > img");
   checkMedia();
+
+  let rootContext = document.body.getAttribute("data-root");
 
   const validateEmail = (email) => {
     return String(email)
@@ -16,9 +17,11 @@
 
   function checkMedia() {
     if (window.innerWidth > 768) {
-      dinamycImage.src = "../assets/images/illustration-sign-up-desktop.svg";
+      dinamycImage.src =
+        rootContext + "/assets/images/illustration-sign-up-desktop.svg";
     } else {
-      dinamycImage.src = "../assets/images/illustration-sign-up-mobile.svg";
+      dinamycImage.src =
+        rootContext + "/assets/images/illustration-sign-up-mobile.svg";
     }
   }
 
