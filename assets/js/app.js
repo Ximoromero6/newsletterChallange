@@ -3,9 +3,11 @@
   const emailText = formEmail.querySelector("input");
 
   let dinamycImage = document.querySelector(".rightContainer > img");
-  checkMedia();
 
-  let rootContext = document.body.getAttribute("data-root");
+  const protocol = window.location.protocol;
+  const host = window.location.host;
+
+  checkMedia();
 
   const validateEmail = (email) => {
     return String(email)
@@ -17,11 +19,9 @@
 
   function checkMedia() {
     if (window.innerWidth > 768) {
-      dinamycImage.src =
-        rootContext + "/assets/images/illustration-sign-up-desktop.svg";
+      dinamycImage.src = "./assets/images/illustration-sign-up-desktop.svg";
     } else {
-      dinamycImage.src =
-        rootContext + "/assets/images/illustration-sign-up-mobile.svg";
+      dinamycImage.src = "./assets/images/illustration-sign-up-mobile.svg";
     }
   }
 
@@ -69,5 +69,4 @@
       location.reload();
     }
   }
-  Shar;
 })();
