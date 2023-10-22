@@ -46,7 +46,7 @@
         <div class="thanksPopup">
           <img src="./assets/images/icon-success.svg">
           <h2>Thanks for subscribing!</h2>
-          <p>An email confirmation has been sent to ${emailText.value}. Please open it and click the button inside to confirm your subscription.</p>
+          <p>An email confirmation has been sent to <b>${emailText.value}</b>. Please open it and click the button inside to confirm your subscription.</p>
           <button class="dismissMessageBtn">Dismiss message</button>
         </div>
     `;
